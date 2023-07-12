@@ -14,7 +14,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
 
-app.post("/send-email", (req, res) => {
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hello World!",
+  });
+});
+
+app.post("/api/v1/send-email", (req, res) => {
   // Extract the form data
   const { name, email, message } = req.body;
 

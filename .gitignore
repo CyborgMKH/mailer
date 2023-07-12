@@ -1,2 +1,2 @@
-# ignoring this environment file from pushing it into github repsitory cause it had very inportant environment variables 
+/node_modules
 .env
