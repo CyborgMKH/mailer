@@ -1,0 +1,30 @@
+{
+  "name": "nodemailer",
+  "version": "1.0.0",
+  "description": "This is nodemailer api by mukhiya",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CyborgMKH/mailer.git"
+  },
+  "keywords": [
+    "okay"
+  ],
+  "author": "Suman Mukhiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyborgMKH/mailer/issues"
+  },
+  "homepage": "https://github.com/CyborgMKH/mailer#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.1",
+    "nodemailer": "^6.9.3"
+  }
+}
