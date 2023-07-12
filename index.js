@@ -20,8 +20,9 @@ app.get("/", (req, res) => {
   });
 });
 
+
 app.post("/api/v1/send-email", (req, res) => {
-  // Extract the form-data
+  // Extract the form data
   const { name, email, message } = req.body;
 
   // Create a transporter using Zoho Mail SMTP settings
