@@ -57,7 +57,7 @@ app.post("/api/v1/send-email", (req, res) => {
         .json({ error: "An error occurred while sending the email." });
     } else {
       console.log("Email sent:", info.response);
-      res.json({ message: "Email sent successfully." });
+      res.json({ message: "Email sent successfully.",success:true });
     }
   });
 });
