@@ -42,7 +42,7 @@ app.post("/api/v1/send-email", (req, res) => {
 
   // Compose the email message
   const mailOptions = {
-    from: email,
+    from: process.env.USER_EMAIL,
     to: process.env.USER_EMAIL,
     subject: "New Contact Form Submission",
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
