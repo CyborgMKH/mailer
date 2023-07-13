@@ -9,9 +9,12 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors({
-  origin: "http://localhost:3000"
-}));
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
@@ -21,7 +24,6 @@ app.get("/", (req, res) => {
     message: "Hello World!",
   });
 });
-
 
 app.post("/api/v1/send-email", (req, res) => {
   // Extract the form data
@@ -50,7 +52,9 @@ app.post("/api/v1/send-email", (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error(error);
-      res.status(500).json({ error: "An error occurred while sending the email." });
+      res
+        .status(500)
+        .json({ error: "An error occurred while sending the email." });
     } else {
       console.log("Email sent:", info.response);
       res.json({ message: "Email sent successfully." });
