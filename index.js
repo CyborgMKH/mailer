@@ -8,13 +8,13 @@ const limiter = require("./express-rate-limit");
 require("dotenv").config();
 
 const app = express();
-
-app.use(
-  cors({
-    origin: "https://sumanmukhiya.com.np",
-    methods: ["GET", "POST"],
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: "https://sumanmukhiya.com.np",
+//     methods: ["GET", "POST"],
+//   })
+// );
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
