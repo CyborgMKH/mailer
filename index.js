@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://sumanmukhiya.com.np",
     methods: ["GET", "POST"],
   })
 );
@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/api/v1/send-email", (req, res) => {
-  // Extract the form data
+  // Extract the form-data
   const { name, email, message } = req.body;
 
   // Create a transporter using Zoho Mail SMTP settings
@@ -57,7 +57,7 @@ app.post("/api/v1/send-email", (req, res) => {
         .json({ error: "An error occurred while sending the email." });
     } else {
       console.log("Email sent:", info.response);
-      res.json({ message: "Email sent successfully.",success:true });
+      res.json({ message: "Email sent successfully.", success: true });
     }
   });
 });
