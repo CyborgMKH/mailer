@@ -1,17 +1,19 @@
 {
   "name": "nodemailer",
   "version": "1.0.0",
-  "description": "This is nodemailer api by mukhiya",
-  "main": "index.js",
+  "description": "This is nodemailer API by Mukhiya",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/CyborgMKH/mailer.git"
   },
   "keywords": [
-    "okay"
+    "nodemailer",
+    "express",
+    "api"
   ],
   "author": "Suman Mukhiya",
   "license": "ISC",
