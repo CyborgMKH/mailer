@@ -2,9 +2,9 @@
   "name": "nodemailer",
   "version": "1.0.0",
   "description": "This is nodemailer API by Mukhiya",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
